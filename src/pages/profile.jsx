@@ -67,8 +67,6 @@ export default function ProfilePage(props) {
       </div>
     </div>
 
-
-
     {/* 功能卡片 */}
     <div className="px-4 py-4">
       <div className="bg-white rounded-xl shadow-sm p-4">
