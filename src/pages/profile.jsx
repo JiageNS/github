@@ -75,19 +75,19 @@ export default function ProfilePage(props) {
         <div className="grid grid-cols-4 gap-4 text-center">
           <div className="flex flex-col items-center">
             <span className="text-sm font-medium">优惠券</span>
-            <span className="text-xs text-gray-500">共0张</span>
+            <span className="text-xs text-gray-500 mt-2">共0张</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="text-sm font-medium">收藏</span>
-            <span className="text-xs text-gray-500">3</span>
+            <span className="text-xs text-gray-500 mt-2">3</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="text-sm font-medium">B礼卡</span>
-            <span className="text-xs text-gray-500">3</span>
+            <span className="text-xs text-gray-500 mt-2">3</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="text-sm font-medium">积分</span>
-            <span className="text-xs text-gray-500">3</span>
+            <span className="text-xs text-gray-500 mt-2">3</span>
           </div>
         </div>
       </div>
