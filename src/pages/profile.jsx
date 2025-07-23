@@ -51,22 +51,23 @@ export default function ProfilePage(props) {
           </div>
         </div>
       </div>
-    </div>
-
-    {/* VIP卡片 */}
-    <div className="px-4 py-4">
-      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl shadow-sm p-4 text-white">
-        <div className="flex justify-between items-center">
-          <div>
-            <div className="font-bold">BVIP还有224天后到期</div>
-            <div className="text-sm opacity-90 mt-1">全年不限次</div>
+      {/* VIP卡片 */}
+      <div className="px-4 py-4">
+        <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl shadow-sm p-4 text-white">
+          <div className="flex justify-between items-center">
+            <div>
+              <div className="font-bold">BVIP还有224天后到期</div>
+              <div className="text-sm opacity-90 mt-1">全年不限次</div>
+            </div>
+            <button className="bg-white text-yellow-600 px-4 py-2 rounded-full text-sm font-medium">
+              立即续费
+            </button>
           </div>
-          <button className="bg-white text-yellow-600 px-4 py-2 rounded-full text-sm font-medium">
-            立即续费
-          </button>
         </div>
       </div>
     </div>
+
+
 
     {/* 功能卡片 */}
     <div className="px-4 py-4">
