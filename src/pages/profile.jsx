@@ -40,7 +40,7 @@ export default function ProfilePage(props) {
   };
   return <div style={style} className="min-h-screen bg-gray-50">
     {/* 用户信息头部 */}
-    <div className="bg-gradient-to-r from-orange-500 to-orange-400 px-4 pt-12 pb-8">
+    <div className="bg-gradient-to-r from-blue-700 to-blue-900 rounded-xl px-4 pt-12 pb-8">
       <div className="flex items-center">
         <img src={userInfo.avatar} alt="用户头像" className="w-20 h-20 rounded-full border-4 border-white" />
         <div className="ml-4 text-white">
@@ -55,13 +55,13 @@ export default function ProfilePage(props) {
 
     {/* VIP卡片 */}
     <div className="px-4 py-4">
-      <div class="bg-gradient-to-r from-amber-400 via-amber-600 to-amber-800 rounded-xl shadow-md p-4 text-white">
+      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl shadow-sm p-4 text-white">
         <div className="flex justify-between items-center">
           <div>
             <div className="font-bold">BVIP还有224天后到期</div>
             <div className="text-sm opacity-90 mt-1">全年不限次</div>
           </div>
-          <button className="bg-white text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+          <button className="bg-white text-yellow-600 px-4 py-2 rounded-full text-sm font-medium">
             立即续费
           </button>
         </div>
@@ -77,15 +77,15 @@ export default function ProfilePage(props) {
             <span className="text-xs text-gray-500">共0张</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-sm font-medium">积分</span>
-            <span className="text-xs text-gray-500">1088</span>
+            <span className="text-sm font-medium">收藏</span>
+            <span className="text-xs text-gray-500">3</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="text-sm font-medium">B礼卡</span>
             <span className="text-xs text-gray-500">3</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-sm font-medium">收藏</span>
+            <span className="text-sm font-medium">积分</span>
             <span className="text-xs text-gray-500">3</span>
           </div>
         </div>
