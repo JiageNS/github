@@ -40,7 +40,7 @@ export default function ProfilePage(props) {
   };
   return <div style={style} className="min-h-screen bg-gray-50">
     {/* 用户信息头部 */}
-    <div className="bg-gradient-to-r from-amber-900 via-amber-800 to-gray-900 rounded-xl px-4 pt-12 pb-8">
+    <div className="bg-gradient-to-r from-gray-900 via-amber-900/20 to-gray-900 rounded-xl px-4 pt-12 pb-8">
       <div className="flex items-center">
         <img src={userInfo.avatar} alt="用户头像" className="w-20 h-20 rounded-full border-4 border-white" />
         <div className="ml-4 text-white">
