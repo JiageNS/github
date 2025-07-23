@@ -52,8 +52,8 @@ export default function ProfilePage(props) {
         </div>
       </div>
       {/* VIP卡片 */}
-      <div className="px-4 py-4">
-        <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl shadow-sm p-4 text-white">
+      <div className="py-4">
+        <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl shadow-sm text-white">
           <div className="flex justify-between items-center">
             <div>
               <div className="font-bold">BVIP还有224天后到期</div>
