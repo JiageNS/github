@@ -1,7 +1,7 @@
 // @ts-ignore;
 import React, { useState } from 'react';
 // @ts-ignore;
-import { User, Settings, Heart, CreditCard, Shield, LogOut, ChevronRight, Gift, Award, ShoppingBag } from 'lucide-react';
+import { User, Settings, ShoppingBag, LogOut, ChevronRight } from 'lucide-react';
 
 import { TabBar } from '@/components/TabBar';
 export default function ProfilePage(props) {
@@ -14,7 +14,7 @@ export default function ProfilePage(props) {
     name: $w.auth.currentUser?.name || '小明',
     avatar: $w.auth.currentUser?.avatarUrl || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
     level: '黄金会员',
-    points: 2580,
+    points: 1088,
     streak: 15
   };
   const menuItems = [{
@@ -71,25 +71,23 @@ export default function ProfilePage(props) {
 
       {/* 新增功能卡片 */}
       <div className="px-4 py-4">
-        <div className="bg-white rounded-xl shadow-sm p-4 mb-4">
-          <div className="grid grid-cols-3 gap-4 text-center">
+        <div className="bg-white rounded-xl shadow-sm p-4">
+          <div className="grid grid-cols-4 gap-4 text-center">
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-2">
-                <Gift size={24} className="text-orange-500" />
-              </div>
               <span className="text-sm font-medium">优惠券</span>
+              <span className="text-xs text-gray-500">共0张</span>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
-                <Award size={24} className="text-blue-500" />
-              </div>
               <span className="text-sm font-medium">积分</span>
+              <span className="text-xs text-gray-500">1088</span>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-2">
-                <Heart size={24} className="text-green-500" />
-              </div>
               <span className="text-sm font-medium">收藏</span>
+              <span className="text-xs text-gray-500">3</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-sm font-medium">B礼卡</span>
+              <span className="text-xs text-gray-500">3</span>
             </div>
           </div>
         </div>
