@@ -1,7 +1,7 @@
 // @ts-ignore;
 import React, { useState } from 'react';
 // @ts-ignore;
-import { User, Settings, Heart, CreditCard, Shield, LogOut, ChevronRight } from 'lucide-react';
+import { User, Settings, Heart, CreditCard, Shield, LogOut, ChevronRight, Gift, Award, ShoppingBag } from 'lucide-react';
 
 import { TabBar } from '@/components/TabBar';
 export default function ProfilePage(props) {
@@ -18,20 +18,10 @@ export default function ProfilePage(props) {
     streak: 15
   };
   const menuItems = [{
-    icon: Heart,
-    title: '我的收藏',
-    subtitle: '收藏的课程和文章',
-    color: 'text-red-500'
-  }, {
-    icon: CreditCard,
-    title: '会员中心',
-    subtitle: '查看会员权益',
-    color: 'text-yellow-500'
-  }, {
-    icon: Shield,
-    title: '隐私设置',
-    subtitle: '管理个人信息',
-    color: 'text-green-500'
+    icon: ShoppingBag,
+    title: '我的订单',
+    subtitle: '查看所有订单',
+    color: 'text-purple-500'
   }, {
     icon: Settings,
     title: '系统设置',
@@ -79,8 +69,34 @@ export default function ProfilePage(props) {
         </div>
       </div>
 
+      {/* 新增功能卡片 */}
+      <div className="px-4 py-4">
+        <div className="bg-white rounded-xl shadow-sm p-4 mb-4">
+          <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="flex flex-col items-center">
+              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-2">
+                <Gift size={24} className="text-orange-500" />
+              </div>
+              <span className="text-sm font-medium">优惠券</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                <Award size={24} className="text-blue-500" />
+              </div>
+              <span className="text-sm font-medium">积分</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-2">
+                <Heart size={24} className="text-green-500" />
+              </div>
+              <span className="text-sm font-medium">收藏</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* 菜单列表 */}
-      <div className="px-4 py-4 pb-20">
+      <div className="px-4 pb-20">
         <div className="bg-white rounded-lg mb-4">
           {menuItems.map((item, index) => <div key={index}>
               <div className="flex items-center p-4 cursor-pointer" onClick={() => console.log(`点击了${item.title}`)}>
