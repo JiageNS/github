@@ -153,26 +153,26 @@ export default function HomePage(props) {
             {courses.map(course => {
             const Icon = course.icon;
             return <div key={course.id} className="flex-none w-64 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow cursor-pointer" onClick={() => handleCourseClick(course.id)}>
-                  <div className="relative">
-                    <img src={course.image} alt={course.title} className="w-full h-32 object-cover rounded-t-xl" />
-                    <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
-                      {course.duration}分钟
-                    </div>
+                <div className="relative">
+                  <img src={course.image} alt={course.title} className="w-full h-32 object-cover rounded-t-xl" />
+                  <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
+                    {course.duration}分钟
                   </div>
-                  <div className="p-4">
-                    <h4 className="font-semibold text-gray-900 mb-1">{course.title}</h4>
-                    <p className="text-sm text-gray-500 mb-2">{course.description}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <Icon size={16} className={course.color} />
-                        <span className="text-sm text-gray-600 ml-1">{course.level}</span>
-                      </div>
-                      <button className="bg-orange-500 text-white text-sm px-3 py-1 rounded-full">
-                        开始
-                      </button>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 mb-1">{course.title}</h4>
+                  <p className="text-sm text-gray-500 mb-2">{course.description}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <Icon size={16} className={course.color} />
+                      <span className="text-sm text-gray-600 ml-1">{course.level}</span>
                     </div>
+                    <button className="bg-orange-500 text-white text-sm px-3 py-1 rounded-full">
+                      开始
+                    </button>
                   </div>
-                </div>;
+                </div>
+              </div>;
           })}
           </div>
         </div>
