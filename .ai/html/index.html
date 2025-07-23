@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>运动瘦身 - 首页</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+    }
+    .safe-area-bottom {
+      padding-bottom: env(safe-area-inset-bottom, 20px);
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    }
+    .card-shadow {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .course-card {
+      transition: transform 0.3s ease;
+    }
+    .course-card:hover {
+      transform: translateY(-2px);
+    }
+    .bottom-nav {
+      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.95);
+    }
+    .nav-active {
+      color: #FF6B35;
+    }
+    .nav-inactive {
+      color: #999;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- 顶部状态栏 -->
+  <div class="bg-white px-4 pt-12 pb-4">
+    <div class="flex justify-between items-center">
+      <div>
+        <h1 class="text-xl font-bold text-gray-900">早上好，小明</h1>
+        <p class="text-sm text-gray-500 mt-1">今天是 7月23日 星期三</p>
+      </div>
+      <div class="w-12 h-12 rounded-full overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
+             alt="用户头像" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+
+  <!-- 主要内容区域 -->
+  <div class="px-4 pb-20">
+    <!-- 今日数据卡片 -->
+    <div class="gradient-bg rounded-2xl p-6 text-white mb-6 card-shadow">
+      <h2 class="text-lg font-semibold mb-4">今日运动数据</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="text-center">
+          <div class="text-2xl font-bold" id="steps">8,432</div>
+          <div class="text-sm opacity-80">步数</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold" id="calories">356</div>
+          <div class="text-sm opacity-80">消耗(kcal)</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold" id="duration">45</div>
+          <div class="text-sm opacity-80">时长(分钟)</div>
+        </div>
+      </div>
+      <div class="mt-4 bg-white bg-opacity-20 rounded-lg p-3">
+        <div class="flex justify-between items-center">
+          <span class="text-sm">目标完成度</span>
+          <span class="text-sm font-semibold" id="progress">84%</span>
+        </div>
+        <div class="w-full bg-white bg-opacity-30 rounded-full h-2 mt-2">
+          <div class="bg-white h-2 rounded-full transition-all duration-500" style="width: 84%" id="progressBar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 推荐课程 -->
+    <div class="mb-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-semibold text-gray-900">推荐课程</h3>
+        <a href="#" class="text-sm text-orange-500">查看全部</a>
+      </div>
+      <div class="flex overflow-x-auto space-x-4 pb-2 -mx-4 px-4">
+        <!-- 课程卡片1 -->
+        <div class="course-card flex-none w-64 bg-white rounded-xl card-shadow">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop" 
+                 alt="HIIT燃脂" class="w-full h-32 object-cover rounded-t-xl">
+            <div class="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
+              30分钟
+            </div>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold text-gray-900 mb-1">HIIT燃脂训练</h4>
+            <p class="text-sm text-gray-500 mb-2">高强度间歇训练，快速燃脂</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <i class="fas fa-fire text-orange-500 text-sm"></i>
+                <span class="text-sm text-gray-600 ml-1">中级</span>
+              </div>
+              <button class="bg-orange-500 text-white text-sm px-3 py-1 rounded-full">开始</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 课程卡片2 -->
+        <div class="course-card flex-none w-64 bg-white rounded-xl card-shadow">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=300&h=200&fit=crop" 
+                 alt="瑜伽" class="w-full h-32 object-cover rounded-t-xl">
+            <div class="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
+              45分钟
+            </div>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold text-gray-900 mb-1">晨间瑜伽</h4>
+            <p class="text-sm text-gray-500 mb-2">唤醒身体，提升柔韧性</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <i class="fas fa-leaf text-green-500 text-sm"></i>
+                <span class="text-sm text-gray-600 ml-1">初级</span>
+              </div>
+              <button class="bg-orange-500 text-white text-sm px-3 py-1 rounded-full">开始</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 课程卡片3 -->
+        <div class="course-card flex-none w-64 bg-white rounded-xl card-shadow">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1549476464-37392f717541?w=300&h=200&fit=crop" 
+                 alt="力量训练" class="w-full h-32 object-cover rounded-t-xl">
+            <div class="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
+              25分钟
+            </div>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold text-gray-900 mb-1">核心力量</h4>
+            <p class="text-sm text-gray-500 mb-2">强化核心肌群，塑造线条</p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <i class="fas fa-dumbbell text-blue-500 text-sm"></i>
+                <span class="text-sm text-gray-600 ml-1">高级</span>
+              </div>
+              <button class="bg-orange-500 text-white text-sm px-3 py-1 rounded-full">开始</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 健康资讯 -->
+    <div class="mb-4">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">健康小贴士</h3>
+      <div class="space-y-3">
+        <div class="bg-white rounded-lg p-4 card-shadow flex items-start">
+          <div class="w-16 h-16 rounded-lg overflow-hidden mr-3">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=100&h=100&fit=crop" 
+                 alt="健康饮食" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1">
+            <h4 class="font-medium text-gray-900 text-sm">运动后这样吃，燃脂效果翻倍</h4>
+            <p class="text-xs text-gray-500 mt-1">运动后30分钟内补充蛋白质...</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-4 card-shadow flex items-start">
+          <div class="w-16 h-16 rounded-lg overflow-hidden mr-3">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=100&h=100&fit=crop" 
+                 alt="睡眠" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1">
+            <h4 class="font-medium text-gray-900 text-sm">睡眠不足会影响减肥效果？</h4>
+            <p class="text-xs text-gray-500 mt-1">研究表明，每天睡7-9小时...</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-4 card-shadow flex items-start">
+          <div class="w-16 h-16 rounded-lg overflow-hidden mr-3">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=100&h=100&fit=crop" 
+                 alt="运动" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1">
+            <h4 class="font-medium text-gray-900 text-sm">每天10分钟，改善体态的拉伸动作</h4>
+            <p class="text-xs text-gray-500 mt-1">久坐族必学的5个拉伸动作...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部导航栏 -->
+  <div class="fixed bottom-0 left-0 right-0 bottom-nav border-t border-gray-200 safe-area-bottom">
+    <div class="flex justify-around items-center h-16">
+      <button class="flex flex-col items-center nav-active" data-tab="home">
+        <i class="fas fa-home text-xl mb-1"></i>
+        <span class="text-xs">首页</span>
+      </button>
+      <button class="flex flex-col items-center nav-inactive" data-tab="courses">
+        <i class="fas fa-dumbbell text-xl mb-1"></i>
+        <span class="text-xs">瘦身</span>
+      </button>
+      <button class="flex flex-col items-center nav-inactive" data-tab="shop">
+        <i class="fas fa-shopping-bag text-xl mb-1"></i>
+        <span class="text-xs">商城</span>
+      </button>
+      <button class="flex flex-col items-center nav-inactive" data-tab="orders">
+        <i class="fas fa-clipboard-list text-xl mb-1"></i>
+        <span class="text-xs">订单</span>
+      </button>
+      <button class="flex flex-col items-center nav-inactive" data-tab="profile">
+        <i class="fas fa-user text-xl mb-1"></i>
+        <span class="text-xs">我的</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // 模拟数据更新
+    function updateData() {
+      const steps = Math.floor(Math.random() * 2000) + 7000;
+      const calories = Math.floor(steps * 0.042);
+      const duration = Math.floor(calories / 8);
+      const progress = Math.min(Math.floor((steps / 10000) * 100), 100);
+
+      document.getElementById('steps').textContent = steps.toLocaleString();
+      document.getElementById('calories').textContent = calories;
+      document.getElementById('duration').textContent = duration;
+      document.getElementById('progress').textContent = progress + '%';
+      document.getElementById('progressBar').style.width = progress + '%';
+    }
+
+    // 底部导航交互
+    document.querySelectorAll('[data-tab]').forEach(button => {
+      button.addEventListener('click', function() {
+        document.querySelectorAll('[data-tab]').forEach(btn => {
+          btn.classList.remove('nav-active');
+          btn.classList.add('nav-inactive');
+        });
+        this.classList.remove('nav-inactive');
+        this.classList.add('nav-active');
+      });
+    });
+
+    // 下拉刷新
+    let startY = 0;
+    let isRefreshing = false;
+
+    document.addEventListener('touchstart', (e) => {
+      startY = e.touches[0].clientY;
+    });
+
+    document.addEventListener('touchmove', (e) => {
+      if (window.scrollY === 0 && !isRefreshing) {
+        const currentY = e.touches[0].clientY;
+        if (currentY - startY > 50) {
+          isRefreshing = true;
+          // 显示刷新动画
+          const refreshEl = document.createElement('div');
+          refreshEl.className = 'fixed top-0 left-0 right-0 bg-white py-2 text-center text-sm text-gray-600 z-50';
+          refreshEl.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>正在刷新...';
+          document.body.appendChild(refreshEl);
+          
+          setTimeout(() => {
+            updateData();
+            refreshEl.remove();
+            isRefreshing = false;
+          }, 1500);
+        }
+      }
+    });
+
+    // 初始化
+    updateData();
+  </script>
+</body>
+</html>

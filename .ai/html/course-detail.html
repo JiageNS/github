@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>课程详情 - HIIT燃脂训练</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+    }
+    .safe-area-bottom {
+      padding-bottom: env(safe-area-inset-bottom, 20px);
+    }
+    .gradient-overlay {
+      background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- 顶部图片 -->
+  <div class="relative">
+    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" 
+         alt="HIIT燃脂" class="w-full h-64 object-cover">
+    <div class="absolute inset-0 gradient-overlay"></div>
+    <button class="absolute top-12 left-4 w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <div class="absolute bottom-4 left-4 right-4 text-white">
+      <h1 class="text-2xl font-bold mb-1">HIIT燃脂训练</h1>
+      <p class="text-sm opacity-90">高强度间歇训练，快速燃脂塑形</p>
+    </div>
+  </div>
+
+  <!-- 课程信息 -->
+  <div class="px-4 py-4">
+    <div class="bg-white rounded-xl p-4 mb-4">
+      <div class="flex justify-between items-center mb-3">
+        <div class="flex items-center space-x-4">
+          <div class="text-center">
+            <div class="text-orange-500 font-bold">30分钟</div>
+            <div class="text-xs text-gray-500">时长</div>
+          </div>
+          <div class="text-center">
+            <div class="text-orange-500 font-bold">中级</div>
+            <div class="text-xs text-gray-500">难度</div>
+          </div>
+          <div class="text-center">
+            <div class="text-orange-500 font-bold">350kcal</div>
+            <div class="text-xs text-gray-500">消耗</div>
+          </div>
+        </div>
+        <div class="text-right">
+          <div class="text-sm text-gray-500">4.8</div>
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star text-xs"></i>
+            <i class="fas fa-star text-xs"></i>
+            <i class="fas fa-star text-xs"></i>
+            <i class="fas fa-star text-xs"></i>
+            <i class="fas fa-star text-xs"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 课程介绍 -->
+    <div class="bg-white rounded-xl p-4 mb-4">
+      <h3 class="font-semibold mb-2">课程介绍</h3>
+      <p class="text-sm text-gray-600 leading-relaxed">
+        这套HIIT训练专为想要快速燃脂的你设计。通过高强度间歇训练，
+        在短时间内达到最大心率，激活全身脂肪燃烧。适合有一定运动基础的用户。
+      </p>
+    </div>
+
+    <!-- 训练动作 -->
+    <div class="bg-white rounded-xl p-4 mb-4">
+      <h3 class="font-semibold mb-3">训练动作</h3>
+      <div class="space-y-3">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
+            <i class="fas fa-running text-orange-500"></i>
+          </div>
+          <div>
+            <div class="font-medium text-sm">高抬腿</div>
+            <div class="text-xs text-gray-500">30秒 × 3组</div>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
+            <i class="fas fa-dumbbell text-orange-500"></i>
+          </div>
+          <div>
+            <div class="font-medium text-sm">波比跳</div>
+            <div class="text-xs text-gray-500">20次 × 3组</div>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
+            <i class="fas fa-heart text-orange-500"></i>
+          </div>
+          <div>
+            <div class="font-medium text-sm">开合跳</div>
+            <div class="text-xs text-gray-500">40秒 × 3组</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 用户评论 -->
+    <div class="bg-white rounded-xl p-4 mb-20">
+      <h3 class="font-semibold mb-3">用户评价</h3>
+      <div class="space-y-3">
+        <div class="flex">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" 
+               alt="用户" class="w-10 h-10 rounded-full mr-3">
+          <div>
+            <div class="flex items-center">
+              <span class="font-medium text-sm">李小花</span>
+              <div class="flex text-yellow-400 ml-2">
+                <i class="fas fa-star text-xs"></i>
+                <i class="fas fa-star text-xs"></i>
+                <i class="fas fa-star text-xs"></i>
+                <i class="fas fa-star text-xs"></i>
+                <i class="fas fa-star text-xs"></i>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-1">练完真的暴汗！坚持一周瘦了3斤</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部按钮 -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white p-4 safe-area-bottom border-t">
+    <button class="w-full bg-orange-500 text-white py-3 rounded-full font-semibold">
+      开始训练
+    </button>
+  </div>
+</body>
+</html>
